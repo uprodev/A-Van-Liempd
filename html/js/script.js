@@ -94,6 +94,10 @@ jQuery(document).ready(function ($) {
   $(function() {
     $(".accordion-ul > .accordion-item.is-active").children(".accordion-panel").slideDown();
     $(document).on('click', '.accordion-ul > .accordion-item .accordion-thumb', function (e){
+      let item = $(this).closest('.accordion-item').index() + 1;
+      $('.services figure picture').removeClass('is-open');
+      $(".services figure picture:nth-child("+ item  +")").addClass('is-open');
+
       $(this).parent('.accordion-item').siblings(".accordion-item").removeClass("is-active").children(".accordion-panel").slideUp();
       $(this).parent('.accordion-item').toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
     })

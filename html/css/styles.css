@@ -129,17 +129,15 @@ input, textarea, button {
   .bg .img-mob {
     display: none; }
   .bg video, .bg iframe {
-    width: 100%;
-    height: calc(100% + 200px);
+    width: 200%;
+    height: 200%;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
     position: absolute;
-    top: -120px;
-    left: 0;
-    right: 0;
-    bottom: -80px; }
+    top: -50%;
+    left: -50%; }
 
 .bg + * {
   position: relative;
@@ -231,7 +229,9 @@ header {
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0);
           box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0);
   background: rgba(53, 6, 7, 0.8);
-  padding: 9px 0 5px; }
+  padding: 9px 0 5px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
   .top-line .left {
     width: calc(50% - 150px); }
   .top-line .right {
@@ -741,7 +741,8 @@ header {
     padding-top: 45px; }
   .services figure {
     width: calc(100% - 395px);
-    padding: 0; }
+    padding: 0;
+    position: relative; }
     .services figure img {
       width: 114.5%;
       height: 610px;
@@ -750,6 +751,15 @@ header {
       -o-object-position: center;
          object-position: center;
       max-width: 200%; }
+    .services figure picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0; }
+    .services figure .is-open {
+      opacity: 1; }
   .services h3 {
     font-size: 25px;
     font-weight: 900;
@@ -2346,5 +2356,34 @@ footer .address p {
   border-radius: 0; }
   .no-radius .bg:after {
     border-radius: 0; }
+
+.knowledge-slider .swiper-slide .text a:after, .card-section .item a:after, .knowledge-item .item a:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 1000px;
+  height: 1000px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.knowledge-slider .swiper-slide, .card-section .item, .knowledge-item .item {
+  overflow: hidden; }
+  .knowledge-slider .swiper-slide figure, .card-section .item figure, .knowledge-item .item figure {
+    overflow: hidden;
+    border-radius: 0 50px 0 50px; }
+    .knowledge-slider .swiper-slide figure img, .card-section .item figure img, .knowledge-item .item figure img {
+      -webkit-transition: all .4s ease;
+      transition: all .4s ease; }
+  .knowledge-slider .swiper-slide:hover figure img, .card-section .item:hover figure img, .knowledge-item .item:hover figure img {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03); }
+
+.knowledge-slider-wrap .link-wrap-full {
+  position: relative;
+  z-index: 10; }
+
+.contact-banner .item-1 a {
+  text-decoration: none !important; }
 
 /*# sourceMappingURL=styles.css.map */

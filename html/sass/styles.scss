@@ -154,15 +154,13 @@ input, textarea, button{
     display: none;
   }
   video, iframe{
-    width: 100%;
-    height: calc(100% + 200px);
+    width: 200%;
+    height: 200%;
     object-fit: cover;
     object-position: center;
     position: absolute;
-    top: -120px;
-    left: 0;
-    right: 0;
-    bottom: -80px;
+    top: -50%;
+    left: -50%;
   }
 }
 .bg + *{
@@ -259,6 +257,7 @@ header{
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0);
   background: rgba(#350607, 0.8);
   padding: 9px 0 5px;
+  transition: all .4s ease;
   .left{
     width: calc(50% - 150px);
   }
@@ -842,12 +841,24 @@ header{
   figure{
     width: calc(100% - 395px);
     padding: 0;
+    position: relative;
     img{
       width: 114.5%;
       height: 610px;
       object-fit: cover;
       object-position: center;
       max-width: 200%;
+    }
+    picture{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    .is-open{
+      opacity: 1;
     }
   }
   h3{
@@ -2667,5 +2678,45 @@ footer .address p{
     &:after{
       border-radius: 0;
     }
+  }
+}
+
+
+.knowledge-slider .swiper-slide .text a:after, .card-section .item a:after, .knowledge-item .item a:after{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 1000px;
+  height: 1000px;
+  transform: translate(-50%,-50%);
+}
+
+.knowledge-slider .swiper-slide, .card-section .item, .knowledge-item .item {
+  overflow: hidden;
+  figure{
+    overflow: hidden;
+    border-radius: 0 50px 0 50px;
+    img{
+      transition: all .4s ease;
+    }
+  }
+  &:hover{
+    figure{
+      img{
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+.knowledge-slider-wrap .link-wrap-full{
+  position: relative;
+  z-index: 10;
+}
+
+.contact-banner .item-1{
+  a{
+    text-decoration: none!important;
   }
 }
