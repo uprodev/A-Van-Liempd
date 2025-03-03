@@ -1,0 +1,20 @@
+/*   
+Theme Name: A Van Liempd
+*/
+
+figure img{
+	height: auto;
+}
+
+.default-text .h6, .default-text .h6 p {
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	text-align: left;
+	color: #0a0a0a;
+	margin-bottom: 37px;
+	font-family: "Satoshi", sans-serif;
+}
