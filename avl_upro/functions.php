@@ -54,6 +54,12 @@ if(function_exists('acf_add_options_page')) {
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyDiyT05YehIdz2LrV-QOeRa5M18WfKtlnY');
+}
+add_action('acf/init', 'my_acf_init');
+
+
 add_filter('tiny_mce_before_init', 'override_mce_options');
 function override_mce_options($initArray) {
 	$opts = '*[*]';

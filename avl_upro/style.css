@@ -18,3 +18,36 @@ figure img{
 	margin-bottom: 37px;
 	font-family: "Satoshi", sans-serif;
 }
+
+.map-text .acf-map{
+	width: 58.5%;
+}
+
+.map-text .text{
+	padding-bottom: 0;
+}
+
+.quick-links-wrap .quick-links{
+	margin-bottom: 60px !important;
+}
+
+
+@media (max-width: 991px){
+	.map-text .acf-map{
+		width: 50%;
+	}
+}
+
+@media (max-width: 767px){
+	.map-text .acf-map{
+		width: 100%;
+	}
+}
+
+@media (max-width: 576px){
+	.map-text .acf-map{
+		margin-left: 12px;
+		margin-right: 12px;
+		width: calc(100% - 24px);
+	}
+}

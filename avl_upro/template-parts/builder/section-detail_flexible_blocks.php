@@ -44,7 +44,7 @@ if($args['row']):
               ?>
 
               <?php if (is_array($item['items']) && checkArrayForValues($item['items'])): ?>
-              <div class="<?php if($item['spacing_top'] == 'No padding') echo ' pt-0'; if($item['spacing_bottom'] == 'No padding') echo ' pb-0'; ?>">
+              <div class="quick-links-wrap<?php if($item['spacing_top'] == 'No padding') echo ' pt-0'; if($item['spacing_bottom'] == 'No padding') echo ' pb-0'; ?>">
 
                 <?php if ($item['title']): ?>
                   <h4><?= $item['title'] ?></h4>
@@ -54,7 +54,6 @@ if($args['row']):
 
                   <?php foreach ($item['items'] as $item): ?>
                     <?php if ($item['link']): ?>
-
                       <a href="<?= $item['link']['url'] ?>"<?php if($item['link']['target']) echo ' target="_blank"' ?>><?= html_entity_decode($item['link']['title']) ?></a>
                     <?php endif ?>
                   <?php endforeach ?>

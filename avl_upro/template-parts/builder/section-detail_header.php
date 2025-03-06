@@ -15,6 +15,10 @@ if($args['row']):
         <div class="row justify-content-between align-items-center">
           <div class="text d-flex flex-column justify-content-end">
 
+            <?php if ($subtitle): ?>
+              <h6 class="label"><?= $subtitle ?></h6>
+            <?php endif ?>
+
             <?php if ($title): ?>
               <h1><?= $title ?></h1>
             <?php endif ?>

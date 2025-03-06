@@ -62,6 +62,12 @@ if($args['row']):
                     </li>
                   <?php endforeach ?>
 
+                  <?php if ($item['last_item']): ?>
+                    <li>
+                      <?= add_class_content($item['last_item'], 'full') ?>
+                    </li>
+                  <?php endif ?>
+
                 </ul>
               <?php endif ?>
               

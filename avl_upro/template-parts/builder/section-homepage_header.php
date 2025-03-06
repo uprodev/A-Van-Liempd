@@ -7,7 +7,7 @@ if($args['row']):
       <?= wp_get_attachment_image($background_image['ID'], 'full') ?>
 
       <?php if ($background_video): ?>
-        <iframe src="<?= $background_video ?>?background=1&autoplay=1&loop=1&muted=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+        <iframe width="1280" height="720" src="<?= $background_video . (str_contains($background_video, '?') ? '&' : '?') ?>autoplay=1&mute=1&loop=1&showinfo=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
         </iframe>
       <?php endif ?>
       
